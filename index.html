@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Fatima Ezzahrae Taibi</title>
+  <title>Portfolio — Fatima Ezzahrae Taibi</title>
   <style>
     :root{
       --bg:#0f172a;
@@ -11,15 +11,18 @@
       --text:#e5e7eb;
       --muted:#94a3b8;
       --accent:#2563eb;
+      --border:#1f2a44;
     }
 
-    *{box-sizing:border-box;}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
 
     body{
       margin:0;
       font-family:Segoe UI, Arial, sans-serif;
       background:linear-gradient(180deg,#0f172a,#0b1220);
       color:var(--text);
+      line-height:1.6;
     }
 
     header{
@@ -45,13 +48,16 @@
       padding:15px;
       position:sticky;
       top:0;
-      background:#0f172a;
-      border-bottom:1px solid #1f2a44;
+      background:rgba(15,23,42,0.95);
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid var(--border);
+      z-index:1000;
     }
 
     nav a{
       color:var(--muted);
       text-decoration:none;
+      transition:0.3s;
     }
 
     nav a:hover{
@@ -77,6 +83,12 @@
       border-radius:12px;
       margin-top:15px;
       box-shadow:0 10px 30px rgba(0,0,0,0.3);
+      border:1px solid var(--border);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
     }
 
     .grid{
@@ -104,9 +116,11 @@
       text-decoration:none;
       border-radius:6px;
       font-size:14px;
+      transition:0.3s;
     }
 
     .btn:hover{
+      transform:translateY(-2px);
       opacity:0.9;
     }
 
@@ -114,7 +128,7 @@
       text-align:center;
       padding:30px;
       color:var(--muted);
-      border-top:1px solid #1f2a44;
+      border-top:1px solid var(--border);
     }
   </style>
 </head>
@@ -129,28 +143,29 @@
 </nav>
 
 <header>
-  <h1>Fatima-Ezzahrae Taibi</h1>
+  <h1>Fatima‑Ezzahrae Taibi</h1>
   <p>Ingénieure d'État en Génie Informatique</p>
-  <p>Génie Logiciel</p>
+  <p>Spécialité : Génie Logiciel</p>
 </header>
 
 <section id="about">
   <h2>À propos</h2>
   <div class="card">
-    Ingénieure diplômée en Génie Informatique (2024), spécialisée en développement logiciel, systèmes distribués et ingénierie des données. 
-    Passionnée par la conception de solutions robustes et sécurisées.
+    Ingénieure diplômée en Génie Informatique (2024), spécialisée en développement logiciel, systèmes distribués et ingénierie des données.
+    Passionnée par la conception de solutions robustes, performantes et sécurisées.
   </div>
 </section>
 
 <section id="skills">
   <h2>Compétences</h2>
   <div class="card grid">
+
     <div>
       <b>Langages</b><br>
       <span class="tag">C</span>
-              <span class="tag">c++</span>
-              <span class="tag">xml</span>
-              <span class="tag">php</span>
+      <span class="tag">C++</span>
+      <span class="tag">XML</span>
+      <span class="tag">PHP</span>
       <span class="tag">Java</span>
       <span class="tag">Python</span>
       <span class="tag">C#</span>
@@ -162,23 +177,22 @@
       <span class="tag">React</span>
       <span class="tag">Angular</span>
       <span class="tag">Spring Boot</span>
-      <span class="tag">Laravel</span> 
-              <span class="tag">Express.js</span>
-              <span class="tag">JEE</span>
-              <span class="tag">.Net Core</span>
-              <span class="tag">Html</span>
-        <span class="tag">Javascript</span>
-        <span class="tag">CSS</span>
-        <span class="tag">Bootstrap</span>
+      <span class="tag">Laravel</span>
+      <span class="tag">Express.js</span>
+      <span class="tag">JEE</span>
+      <span class="tag">.NET Core</span>
+      <span class="tag">HTML</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Bootstrap</span>
     </div>
 
     <div>
-      <b>BDD</b><br>
+      <b>Bases de données</b><br>
       <span class="tag">MySQL</span>
-        <span class="tag">Oracle</span>
-        <span class="tag">Sql Server</span>
-        <span class="tag">PostgreSql</span>
-        
+      <span class="tag">Oracle</span>
+      <span class="tag">SQL Server</span>
+      <span class="tag">PostgreSQL</span>
       <span class="tag">MongoDB</span>
       <span class="tag">Cassandra</span>
       <span class="tag">Neo4j</span>
@@ -187,57 +201,15 @@
     <div>
       <b>DevOps & Outils</b><br>
       <span class="tag">Git</span>
-        <span class="tag">Github</span>
+      <span class="tag">GitHub</span>
       <span class="tag">Docker</span>
       <span class="tag">CI/CD</span>
-        <span class="tag">Trello</span>
-        <span class="tag">SonarQube</span>
-        <span class="tag">RabbitMq</span>
-        <span class="tag">Microsoft Project</span>
+      <span class="tag">Trello</span>
+      <span class="tag">SonarQube</span>
+      <span class="tag">RabbitMQ</span>
+      <span class="tag">Microsoft Project</span>
     </div>
-      <div>
-      <b>Systèmes</b><br>
-      <span class="tag">Linux(ubuntu)</span>
-        <span class="tag">Windows</span>
-      <span class="tag">Mac OS</span>
-      
-    </div>
-      <div>
-      <b>Méthodes</b><br>
-      <span class="tag"> Agile / Scrum</span>
-        <span class="tag">UP/XP</span>
-      <span class="tag">Merise</span>
-            <span class="tag">UML</span>
-      </div>  
-        <div>
-      <b>Sécurité Informatique</b><br>
-      <span class="tag"> RSA/DES/AES </span>
-        <span class="tag">ElGamal</span>
-      <span class="tag">protocoles de chiffrement</span>
-      
-      </div>
-           <div>
-      <b>Réseaux</b><br>
-      <span class="tag">DNS </span>
-        <span class="tag">DHCP</span>
-      <span class="tag">FTP</span>
-      <span class="tag">Samba</span>
-        <span class="tag">Apache</span>
-      </div>
-       <div>
-      <b>Virtualisation & Cloud</b><br>
-      <span class="tag">VMware </span>
-        <span class="tag">VirtualBox</span>
-      <span class="tag">principes Cloud Computing (IaaS, PaaS, SaaS)</span>
-     
-      </div> 
-    <div>
-      <b>Intelligence Artificielle & Machine Learning</b><br>
-      <span class="tag">la régression logistique </span>
-        <span class="tag">forêt aléatoire</span>
-      <span class="tag">arbres de décision</span>
-     <span class="tag">CNN</span>
-      </div>
+
   </div>
 </section>
 
@@ -245,47 +217,47 @@
   <h2>Projets</h2>
 
   <div class="card">
-    <h3>Développement du module virement pour
-le client wafacash filiale Tunisie (.NET Core)</h3>
-    <p>Développement d’une API sécurisée (.NET Core) pour les transactions financières.</p>
-    <a class="btn" href="file:///Users/hdmac/Desktop/me%CC%81moirePFE.pdf">📄 Rapport</a>
+    <h3>Module de virement bancaire — Wafacash (Tunisie)</h3>
+    <p>Développement d’une API sécurisée en .NET Core pour les transactions financières.</p>
+    <a class="btn" href="#">📄 Rapport</a>
     <a class="btn" href="#">🎥 Démo</a>
     <a class="btn" href="#">🖼️ Interfaces</a>
   </div>
 
   <div class="card">
     <h3>Application mobile bancaire</h3>
-    <p>Conception et implémentation d’une application mobile bancaire en Kotlin.</p>
-    <a class="btn" href="file:///Users/hdmac/Desktop/me%CC%81moirePFE.pdf">📄 Rapport</a>
+    <p>Conception et développement d’une application Android en Kotlin.</p>
+    <a class="btn" href="#">📄 Rapport</a>
   </div>
 
   <div class="card">
-    <h3>une application de gestion des ressources humaines avec Laravel.</h3>
-    <p>Gestion des employés et des congés (Laravel + MySQL).</p>
+    <h3>Application de gestion des ressources humaines (Laravel)</h3>
+    <p>Gestion des employés et des congés (Laravel & MySQL).</p>
     <a class="btn" href="https://canva.link/89d583pbgviyui4">📄 Rapport</a>
-   <a class="btn" href="https://www.canva.com/V/VAFmLc5nFAU">🎥 Démo</a>
+    <a class="btn" href="https://www.canva.com/V/VAFmLc5nFAU">🎥 Démo</a>
   </div>
+
   <div class="card">
-    <h3>une application de gestion des stocks informatisée</h3>
-    <p>Gestion Gestion des stocks informatisée via html CSS php</p>
-    <a class="btn" href="file:///Users/hdmac/Desktop/FATIMA%20EZZAHRAE%20TAIBI/gestion%20de%20stock%20cdrom/">📄 Rapport</a>
-   
+    <h3>Application de gestion des stocks</h3>
+    <p>Application web pour la gestion des entrées et sorties (HTML, CSS, PHP).</p>
+    <a class="btn" href="#">📄 Rapport</a>
   </div>
+
   <div class="card">
-    <h3>Création d’un site web pour le traitement des réclamations des citoyens.</h3>
-    
-    <a class="btn" href="file:///Users/hdmac/Desktop/FATIMA%20EZZAHRAE%20TAIBI/Projet%20des%20reclamations.zip">📄 Rapport</a>
-   
+    <h3>Plateforme de réclamations citoyennes</h3>
+    <p>Site web permettant le traitement des réclamations des citoyens.</p>
+    <a class="btn" href="#">📄 Rapport</a>
   </div>
+
 </section>
 
 <section id="experience">
   <h2>Expériences</h2>
 
-  <div class="card">EcoDelta Maroc - Système de supervision et optimisation SQL</div>
-  <div class="card">B3G - Développement module bancaire et mobile</div>
-  <div class="card">ORMVAT - Gestion RH et stocks</div>
-  <div class="card">Conseil Provincial - Plateforme de réclamations</div>
+  <div class="card">EcoDelta Maroc — Système de supervision et optimisation SQL</div>
+  <div class="card">B3G — Développement module bancaire et mobile</div>
+  <div class="card">ORMVAT — Gestion RH et stocks</div>
+  <div class="card">Conseil Provincial — Plateforme de réclamations</div>
 </section>
 
 <section id="contact">
@@ -298,7 +270,7 @@ le client wafacash filiale Tunisie (.NET Core)</h3>
 </section>
 
 <footer>
-  © 2026 - Portfolio Ingénieure en Génie Logiciel
+  © 2026 — Portfolio Ingénieure en Génie Logiciel
 </footer>
 
 </body>
