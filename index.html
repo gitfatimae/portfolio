@@ -4,32 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Fatima Ezzahrae Taibi</title>
+
   <style>
     :root{
-      --bg:#0f172a;
-      --card:#111c33;
+      --bg:#0b1220;
+      --card:rgba(17,28,51,0.75);
       --text:#e5e7eb;
       --muted:#94a3b8;
-      --accent:#2563eb;
+      --accent:#3b82f6;
+      --border:rgba(255,255,255,0.08);
     }
 
-    *{box-sizing:border-box;}
+    *{
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
 
     body{
       margin:0;
-      font-family:Segoe UI, Arial, sans-serif;
-      background:linear-gradient(180deg,#0f172a,#0b1220);
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #111c33, #0b1220);
       color:var(--text);
     }
 
+    /* NAVBAR */
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      padding:15px;
+      position:sticky;
+      top:0;
+      background:rgba(15,23,42,0.8);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+      z-index:1000;
+    }
+
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:white;
+      transform:translateY(-2px);
+    }
+
+    /* HEADER */
     header{
-      padding:80px 20px;
+      padding:90px 20px;
       text-align:center;
     }
 
     header h1{
       margin:0;
-      font-size:42px;
+      font-size:44px;
+      letter-spacing:1px;
     }
 
     header p{
@@ -38,63 +71,63 @@
       font-size:18px;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      padding:15px;
-      position:sticky;
-      top:0;
-      background:#0f172a;
-      border-bottom:1px solid #1f2a44;
-    }
-
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-    }
-
-    nav a:hover{
-      color:white;
-    }
-
+    /* SECTIONS */
     section{
-      max-width:1000px;
+      max-width:1100px;
       margin:auto;
       padding:60px 20px;
     }
 
     h2{
       color:white;
+      font-size:22px;
+      margin-bottom:20px;
       border-left:4px solid var(--accent);
       padding-left:10px;
-      margin-bottom:20px;
     }
 
+    /* CARD */
     .card{
       background:var(--card);
+      border:1px solid var(--border);
       padding:20px;
-      border-radius:12px;
+      border-radius:14px;
       margin-top:15px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+      box-shadow:0 10px 30px rgba(0,0,0,0.35);
+      backdrop-filter: blur(8px);
+      transition:0.3s ease;
     }
 
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(59,130,246,0.4);
+    }
+
+    /* GRID */
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:15px;
     }
 
+    /* TAGS */
     .tag{
       display:inline-block;
       background:#1e293b;
       color:var(--muted);
-      padding:5px 10px;
+      padding:6px 10px;
       border-radius:20px;
       font-size:12px;
       margin:4px;
+      transition:0.3s;
     }
 
+    .tag:hover{
+      background:var(--accent);
+      color:white;
+    }
+
+    /* BUTTON */
     .btn{
       display:inline-block;
       margin-top:10px;
@@ -102,22 +135,27 @@
       background:var(--accent);
       color:white;
       text-decoration:none;
-      border-radius:6px;
+      border-radius:8px;
       font-size:14px;
+      transition:0.3s;
     }
 
     .btn:hover{
-      opacity:0.9;
+      background:#2563eb;
+      transform:scale(1.05);
     }
 
+    /* FOOTER */
     footer{
       text-align:center;
       padding:30px;
       color:var(--muted);
-      border-top:1px solid #1f2a44;
+      border-top:1px solid var(--border);
+      margin-top:40px;
     }
   </style>
 </head>
+
 <body>
 
 <nav>
@@ -145,12 +183,13 @@
 <section id="skills">
   <h2>Compétences</h2>
   <div class="card grid">
+
     <div>
-      <b>Langages de programation</b><br>
+      <b>Langages de programmation</b><br>
       <span class="tag">C</span>
-              <span class="tag">c++</span>
-              <span class="tag">xml</span>
-              <span class="tag">php</span>
+      <span class="tag">c++</span>
+      <span class="tag">xml</span>
+      <span class="tag">php</span>
       <span class="tag">Java</span>
       <span class="tag">Python</span>
       <span class="tag">C#</span>
@@ -162,23 +201,22 @@
       <span class="tag">React</span>
       <span class="tag">Angular</span>
       <span class="tag">Spring Boot</span>
-      <span class="tag">Laravel</span> 
-              <span class="tag">Express.js</span>
-              <span class="tag">JEE</span>
-              <span class="tag">.Net Core</span>
-              <span class="tag">Html</span>
-        <span class="tag">Javascript</span>
-        <span class="tag">CSS</span>
-        <span class="tag">Bootstrap</span>
+      <span class="tag">Laravel</span>
+      <span class="tag">Express.js</span>
+      <span class="tag">JEE</span>
+      <span class="tag">.Net Core</span>
+      <span class="tag">HTML</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Bootstrap</span>
     </div>
 
     <div>
       <b>BDD</b><br>
       <span class="tag">MySQL</span>
-        <span class="tag">Oracle</span>
-        <span class="tag">Sql Server</span>
-        <span class="tag">PostgreSql</span>
-        
+      <span class="tag">Oracle</span>
+      <span class="tag">SQL Server</span>
+      <span class="tag">PostgreSQL</span>
       <span class="tag">MongoDB</span>
       <span class="tag">Cassandra</span>
       <span class="tag">Neo4j</span>
@@ -187,85 +225,15 @@
     <div>
       <b>DevOps & Outils</b><br>
       <span class="tag">Git</span>
-        <span class="tag">Github</span>
+      <span class="tag">GitHub</span>
       <span class="tag">Docker</span>
       <span class="tag">CI/CD</span>
-        <span class="tag">Trello</span>
-        <span class="tag">SonarQube</span>
-        <span class="tag">RabbitMq</span>
-        <span class="tag">Microsoft Project</span>
+      <span class="tag">Trello</span>
+      <span class="tag">SonarQube</span>
+      <span class="tag">RabbitMQ</span>
+      <span class="tag">Microsoft Project</span>
     </div>
-    <div>
-      <b>Test</b><br>
-      <span class="tag">JUnit</span>
-        <span class="tag">xUnit</span>
-    
-    </div>
-    <div>
-      <b>Build & Dépendances</b><br>
-      <span class="tag">Gradle</span>
-        <span class="tag">NuGet</span>
-    
-    </div>
-    <div>
-      <b>Logging & Validation</b><br>
-      <span class="tag">Serilog</span>
-        <span class="tag">FluentValidation</span>
-    
-    </div>
-  
-    
-    <div>
-      <b>Serveurs & Déploiement</b><br>
-      <span class="tag">Tomcat</span>
-        <span class="tag">WildFly</span>
-       <span class="tag">GlassFish</span>
-      <span class="tag">Nginx</span>
-    
-    </div>
-      <div>
-      <b>Systèmes</b><br>
-      <span class="tag">Linux(ubuntu)</span>
-        <span class="tag">Windows</span>
-      <span class="tag">Mac OS</span>
-      
-    </div>
-      <div>
-      <b>Méthodes</b><br>
-      <span class="tag"> Agile / Scrum</span>
-        <span class="tag">UP/XP</span>
-      <span class="tag">Merise</span>
-            <span class="tag">UML</span>
-      </div>  
-        <div>
-      <b>Sécurité Informatique</b><br>
-      <span class="tag"> RSA/DES/AES </span>
-        <span class="tag">ElGamal</span>
-      <span class="tag">protocoles de chiffrement</span>
-      
-      </div>
-           <div>
-      <b>Réseaux</b><br>
-      <span class="tag">DNS </span>
-        <span class="tag">DHCP</span>
-      <span class="tag">FTP</span>
-      <span class="tag">Samba</span>
-        <span class="tag">Apache</span>
-      </div>
-       <div>
-      <b>Virtualisation & Cloud</b><br>
-      <span class="tag">VMware </span>
-        <span class="tag">VirtualBox</span>
-      <span class="tag">principes Cloud Computing (IaaS, PaaS, SaaS)</span>
-     
-      </div> 
-    <div>
-      <b>Intelligence Artificielle & Machine Learning</b><br>
-      <span class="tag">la régression logistique </span>
-        <span class="tag">forêt aléatoire</span>
-      <span class="tag">arbres de décision</span>
-     <span class="tag">CNN</span>
-      </div>
+
   </div>
 </section>
 
@@ -273,99 +241,27 @@
   <h2>Projets des stages</h2>
 
   <div class="card">
-    <h3>Développement du module virement pour
-le client wafacash filiale Tunisie (.NET Core)</h3>
+    <h3>Développement du module virement pour le client wafacash filiale Tunisie (.NET Core)</h3>
     <p>Développement d’une API sécurisée (.NET Core) pour les transactions financières.</p>
     <a class="btn" href="https://drive.google.com/file/d/1lTrNQvalfoAp1mKpb86mo0neRdrJuMbX/view?usp=sharing">📄 Rapport</a>
     <a class="btn" href="https://docs.google.com/presentation/d/1jx_E2dA60MgD3saVH7T341XbvhtI6F--/edit?usp=sharing&ouid=108815559105140062983&rtpof=true&sd=true">🎥 Démo</a>
-    
   </div>
 
-  <div class="card">
-    <h3>Application mobile bancaire</h3>
-    <p>Conception et implémentation d’une application mobile bancaire en Kotlin.</p>
-    <a class="btn" href="https://drive.google.com/file/d/1lTrNQvalfoAp1mKpb86mo0neRdrJuMbX/view?usp=sharing">📄 Rapport</a>
- <a class="btn" href="https://docs.google.com/presentation/d/1jx_E2dA60MgD3saVH7T341XbvhtI6F--/edit?usp=sharing&ouid=108815559105140062983&rtpof=true&sd=true">🎥 Démo</a>
-     </div>
-
-   <div class="card">
-    <h3>Application pour le suivi de production logiciels</h3>
-    <p>Conception et réalisation d'une Application pour le suivi de production logiciels</p>
-    <a class="btn" href="https://drive.google.com/file/d/16ARooOwvZlLXqDqHTphX9ylabXs6m3lF/view?usp=drive_link">📄 Rapport</a>
-  </div>
-  <div class="card">
-    <h3>une application de gestion des ressources humaines avec Laravel.</h3>
-    <p>Gestion des employés et des congés (Laravel + MySQL).</p>
-    <a class="btn" href="https://canva.link/89d583pbgviyui4">📄 Rapport</a>
-   <a class="btn" href="https://drive.google.com/file/d/1mtTkkHl5IM-Sngq7EIuXEEsRjZjmVQXm/view?usp=drive_link">🎥 Démo</a>
-  </div>
-  <div class="card">
-    <h3>une application de gestion des stocks informatisée</h3>
-    <p>Gestion Gestion des stocks informatisée via html CSS php</p>
-    <a class="btn" href="///Users/hdmac/Desktop/FATIMA%20EZZAHRAE%20TAIBI/gestion%20de%20stock%20cdrom/">📄 Rapport</a>
-   
-  </div>
-  <div class="card">
-    <h3>Création d’un site web pour le traitement des réclamations des citoyens.</h3>
-    
-    <a class="btn" href="///Users/hdmac/Desktop/FATIMA%20EZZAHRAE%20TAIBI/Projet%20des%20reclamations.zip">📄 Rapport</a>
-   
-  </div>
 </section>
 
 <section id="experience">
   <h2>Expériences</h2>
-
   <div class="card">EcoDelta Maroc - Stage d’ingénieur logiciel</div>
- <div class="card">B3G - Stage de fin d'études</div>
-  <div class="card">B3G - Stage PFA</div>
-  <div class="card">ORMVAT - Gestion RH </div>
-  <div class="card">ORMVAT - Gestion des stock informatisée </div>
-  <div class="card">Conseil Provincial - Plateforme de réclamations</div>
-  
 </section>
-<section id="projects">
+
+<section id="projects-personnels">
   <h2>Projets Personnels</h2>
-
   <div class="card">
-    <h3>Plateforme de gestion des inscriptions d'une école </h3>
-    <p>La solutions proposée repose sur le développement d'une plateforme intégrée offrant des services spécifiques à chaque acteur du processus d'inscription. Cela inclut la conception de fonctionnalités dédiées aux étudiants pour soumettre leurs demandes d'inscription, modifier celles déjà validées et suivre l'état de leurs requêtes en temps réel. Pour les gestionnaires, un système permettant la validation des inscriptions et la gestion des demandes de modification sera mis en place. En parallèle, des services de notifications seront intégrés pour informer les étudiants et les gestionnaires des mises à jour concernant leurs inscriptions. Enfin, un mécanisme d'authentification sécurisé sera instauré pour assurer la protection des données sensibles et éviter tout accès non autorisé.</p>
-    <a class="btn" href="https://drive.google.com/file/d/1lTrNQvalfoAp1mKpb86mo0neRdrJuMbX/view?usp=sharing">📄 Rapport</a>
-    <a class="btn" href="https://docs.google.com/presentation/d/1jx_E2dA60MgD3saVH7T341XbvhtI6F--/edit?usp=sharing&ouid=108815559105140062983&rtpof=true&sd=true">🎥 Démo des API sur postman</a>
-    
-  </div>
-
-  <div class="card">
-    <h3>Application mobile bancaire</h3>
-    <p>Conception et implémentation d’une application mobile bancaire en Kotlin.</p>
-    <a class="btn" href="https://drive.google.com/file/d/1lTrNQvalfoAp1mKpb86mo0neRdrJuMbX/view?usp=sharing">📄 Rapport</a>
- <a class="btn" href="https://docs.google.com/presentation/d/1jx_E2dA60MgD3saVH7T341XbvhtI6F--/edit?usp=sharing&ouid=108815559105140062983&rtpof=true&sd=true">🎥 Démo</a>
-     </div>
-
-   <div class="card">
-    <h3>Application pour le suivi de production logiciels</h3>
-    <p>Conception et réalisation d'une Application pour le suivi de production logiciels</p>
-    <a class="btn" href="https://drive.google.com/file/d/16ARooOwvZlLXqDqHTphX9ylabXs6m3lF/view?usp=drive_link">📄 Rapport</a>
-  </div>
-  <div class="card">
-    <h3>une application de gestion des ressources humaines avec Laravel.</h3>
-    <p>Gestion des employés et des congés (Laravel + MySQL).</p>
-    <a class="btn" href="https://canva.link/89d583pbgviyui4">📄 Rapport</a>
-   <a class="btn" href="https://drive.google.com/file/d/1mtTkkHl5IM-Sngq7EIuXEEsRjZjmVQXm/view?usp=drive_link">🎥 Démo</a>
-  </div>
-  <div class="card">
-    <h3>une application de gestion des stocks informatisée</h3>
-    <p>Gestion Gestion des stocks informatisée via html CSS php</p>
-    <a class="btn" href="///Users/hdmac/Desktop/FATIMA%20EZZAHRAE%20TAIBI/gestion%20de%20stock%20cdrom/">📄 Rapport</a>
-   
-  </div>
-  <div class="card">
-    <h3>Création d’un site web pour le traitement des réclamations des citoyens.</h3>
-    
-    <a class="btn" href="///Users/hdmac/Desktop/FATIMA%20EZZAHRAE%20TAIBI/Projet%20des%20reclamations.zip">📄 Rapport</a>
-   
+    <h3>Plateforme de gestion des inscriptions d'une école</h3>
+    <p>...</p>
   </div>
 </section>
+
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
