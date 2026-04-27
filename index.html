@@ -1,175 +1,180 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Fatima Ezzahrae Taibi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Fatima Ezzahrae Taibi</title>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:rgba(17,28,51,0.75);
-      --text:#e5e7eb;
-      --muted:#94a3b8;
-      --accent:#3b82f6;
-      --border:rgba(255,255,255,0.08);
-    }
+<style>
+:root{
+  --bg:#0b1220;
+  --bg2:#020617;
+  --card:rgba(17,28,51,0.75);
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --accent:#6366f1;
+  --accent2:#3b82f6;
+  --border:rgba(255,255,255,0.08);
+}
 
-    *{
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+*{box-sizing:border-box;scroll-behavior:smooth}
 
-    body{
-      margin:0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: radial-gradient(circle at top, #111c33, #0b1220);
-      color:var(--text);
-    }
+body{
+  margin:0;
+  font-family:"Segoe UI",Arial,sans-serif;
+  background:linear-gradient(135deg,var(--bg),var(--bg2));
+  color:var(--text);
+}
 
-    /* NAVBAR */
-    nav{
-      display:flex;
-      justify-content:center;
-      gap:25px;
-      padding:15px;
-      position:sticky;
-      top:0;
-      background:rgba(15,23,42,0.8);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--border);
-      z-index:1000;
-    }
+nav{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:15px;
+  position:sticky;
+  top:0;
+  background:rgba(15,23,42,0.7);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
 
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      font-weight:500;
-      transition:0.3s;
-    }
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+}
 
-    nav a:hover{
-      color:white;
-      transform:translateY(-2px);
-    }
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  bottom:-5px;
+  left:0;
+  background:var(--accent);
+  transition:0.3s;
+}
 
-    /* HEADER */
-    header{
-      padding:90px 20px;
-      text-align:center;
-    }
+nav a:hover{
+  color:white;
+}
 
-    header h1{
-      margin:0;
-      font-size:44px;
-      letter-spacing:1px;
-    }
+nav a:hover::after{
+  width:100%;
+}
 
-    header p{
-      color:var(--muted);
-      margin-top:10px;
-      font-size:18px;
-    }
+header{
+  padding:100px 20px;
+  text-align:center;
+}
 
-    /* SECTIONS */
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:60px 20px;
-    }
+header h1{
+  font-size:48px;
+  margin:0;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    h2{
-      color:white;
-      font-size:22px;
-      margin-bottom:20px;
-      border-left:4px solid var(--accent);
-      padding-left:10px;
-    }
+header p{
+  color:var(--muted);
+  font-size:18px;
+  margin-top:10px;
+}
 
-    /* CARD */
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      padding:20px;
-      border-radius:14px;
-      margin-top:15px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.35);
-      backdrop-filter: blur(8px);
-      transition:0.3s ease;
-    }
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
 
-    .card:hover{
-      transform:translateY(-5px);
-      border-color:rgba(59,130,246,0.4);
-    }
+h2{
+  font-size:24px;
+  border-left:4px solid var(--accent);
+  padding-left:12px;
+}
 
-    /* GRID */
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:15px;
-    }
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:22px;
+  border-radius:16px;
+  margin-top:20px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
 
-    /* TAGS */
-    .tag{
-      display:inline-block;
-      background:#1e293b;
-      color:var(--muted);
-      padding:6px 10px;
-      border-radius:20px;
-      font-size:12px;
-      margin:4px;
-      transition:0.3s;
-    }
+.card:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  border-color:rgba(99,102,241,0.5);
+}
 
-    .tag:hover{
-      background:var(--accent);
-      color:white;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+}
 
-    /* BUTTON */
-    .btn{
-      display:inline-block;
-      margin-top:10px;
-      padding:8px 14px;
-      background:var(--accent);
-      color:white;
-      text-decoration:none;
-      border-radius:8px;
-      font-size:14px;
-      transition:0.3s;
-    }
+.tag{
+  display:inline-block;
+  background:#1e293b;
+  color:var(--muted);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  margin:4px;
+  transition:0.3s;
+}
 
-    .btn:hover{
-      background:#2563eb;
-      transform:scale(1.05);
-    }
+.tag:hover{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:white;
+}
 
-    /* FOOTER */
-    footer{
-      text-align:center;
-      padding:30px;
-      color:var(--muted);
-      border-top:1px solid var(--border);
-      margin-top:40px;
-    }
-  </style>
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:9px 16px;
+  border-radius:8px;
+  font-size:14px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(99,102,241,0.4);
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+}
+
+</style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#about">À propos</a>
-  <a href="#skills">Compétences</a>
-  <a href="#projects">Projets</a>
-  <a href="#experience">Expériences</a>
-  <a href="#contact">Contact</a>
+<a href="#about">À propos</a>
+<a href="#skills">Compétences</a>
+<a href="#projects">Projets</a>
+<a href="#experience">Expériences</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <header>
-  <h1>Fatima-Ezzahrae Taibi</h1>
-  <p>Ingénieure d'État en Génie Informatique</p>
-  <p>Génie Logiciel</p>
+<h1>Fatima-Ezzahrae Taibi</h1>
+<p>Ingénieure d'État en Génie Informatique</p>
+<p>Génie Logiciel</p>
 </header>
 
 <section id="about">
@@ -383,10 +388,11 @@ virement dans le cadre d’un projet informatique bancaire est donc crucial pour
   <li>MySQL</li>
        <li>TDD</li>
       <li>Merise/UML</li>
-      <li>Clean Architecture</li>
+     
       <li>Github</li>
     </ul>
-    <a class="btn" href="https://canva.link/89d583pbgviyui4">📄 Rapport</a>
+    <a class="btn" href="https://canva.link/atlflkhy4melecy">📄 Rapport</a>
+    <a class="btn" href="https://www.canva.com/design/DAFlDbIQChU/ZuRZPxpatd_kVc3sUWCr5Q/edit?utm_content=DAFlDbIQChU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Présentation</a>
    <a class="btn" href="https://drive.google.com/file/d/1mtTkkHl5IM-Sngq7EIuXEEsRjZjmVQXm/view?usp=drive_link">🎥 Démo</a>
   </div>
   <div class="card">
@@ -452,17 +458,23 @@ virement dans le cadre d’un projet informatique bancaire est donc crucial pour
    <div class="card">
     <h3>Prédiction diabète à l'aide de machine learning</h3>
     <p></p>
-    <a class="btn" href="https://canva.link/ewblu6a1uqwy6m2">📄 Rapport</a>
+    <a class="btn" href="https://canva.link/ewblu6a1uqwy6m2">📄Présentation</a>
   </div>
   <div class="card">
     <h3>Reconnaissance automatique des chiffres manuscrites via les réseaux de neurones</h3>
     <p></p>
-    <a class="btn" href="https://canva.link/hja01enylav2agq">📄 Rapport</a>
+    <a class="btn" href="https://canva.link/hja01enylav2agq">📄Présentation</a>
      </div>
   <div class="card">
     <h3>Application pour la Compression et Cryptage de Texte, Images et Vidéos en utilisant Python</h3>
     <p>Ce projet vise à répondre à ces enjeux en introduisant un système complet basé sur des techniques avancées telles que la compression par ondelettes, l'Advanced Encryption Standard (AES), et la Cryptographie sur les Courbes Elliptiques (ECC).</p>
-    <a class="btn" href="https://canva.link/gl7x0z461jb7bv2">📄 Rapport</a>
+   <p>Objectif du projet:</br> Élaborer un crypto-système intégrant la compression par ondelettes, le chiffrement AES, et ECC pour sécuriser divers types de données, y compris le texte, les images, et les vidéos.</p>
+    <ul> <li> Cryptage du texte avec ECC Elgamal</li>
+  <li>compression des images avec DWT ,cryptage avec AES-ECC</li>
+      <li>compression des images avec DWT ,cryptage avec AES-ECC</li>
+      
+    <li>Interface graphique par  PyQT5</li>
+       <a class="btn" href="https://canva.link/gl7x0z461jb7bv2">📄 Rapport</a>
    
   </div>
   
