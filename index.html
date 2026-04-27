@@ -9,11 +9,11 @@
 :root{
   --bg:#0b1220;
   --bg2:#020617;
-  --card:rgba(17,28,51,0.75);
+  --card:rgba(17,28,51,0.72);
   --text:#e5e7eb;
   --muted:#94a3b8;
   --accent:#6366f1;
-  --accent2:#3b82f6;
+  --accent2:#22c55e;
   --border:rgba(255,255,255,0.08);
 }
 
@@ -22,19 +22,21 @@
 body{
   margin:0;
   font-family:"Segoe UI",Arial,sans-serif;
-  background:linear-gradient(135deg,var(--bg),var(--bg2));
+  background:radial-gradient(1200px 600px at 20% -10%, #111c33, transparent),
+             radial-gradient(900px 500px at 100% 0%, #0f172a, transparent),
+             linear-gradient(135deg,var(--bg),var(--bg2));
   color:var(--text);
 }
 
 nav{
   display:flex;
   justify-content:center;
-  gap:25px;
-  padding:15px;
+  gap:28px;
+  padding:14px;
   position:sticky;
   top:0;
-  background:rgba(15,23,42,0.7);
-  backdrop-filter:blur(12px);
+  background:rgba(15,23,42,0.65);
+  backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
   z-index:1000;
 }
@@ -44,6 +46,7 @@ nav a{
   text-decoration:none;
   font-weight:500;
   position:relative;
+  letter-spacing:0.3px;
 }
 
 nav a::after{
@@ -51,28 +54,24 @@ nav a::after{
   position:absolute;
   width:0;
   height:2px;
-  bottom:-5px;
+  bottom:-6px;
   left:0;
-  background:var(--accent);
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
   transition:0.3s;
 }
 
-nav a:hover{
-  color:white;
-}
-
-nav a:hover::after{
-  width:100%;
-}
+nav a:hover{color:white}
+nav a:hover::after{width:100%}
 
 header{
-  padding:100px 20px;
+  padding:110px 20px 90px;
   text-align:center;
 }
 
 header h1{
-  font-size:48px;
+  font-size:50px;
   margin:0;
+  font-weight:700;
   background:linear-gradient(90deg,var(--accent),var(--accent2));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -92,6 +91,7 @@ section{
 
 h2{
   font-size:24px;
+  margin-bottom:20px;
   border-left:4px solid var(--accent);
   padding-left:12px;
 }
@@ -99,16 +99,16 @@ h2{
 .card{
   background:var(--card);
   border:1px solid var(--border);
-  padding:22px;
+  padding:24px;
   border-radius:16px;
-  margin-top:20px;
-  backdrop-filter:blur(10px);
-  transition:0.3s;
+  margin-top:18px;
+  backdrop-filter:blur(12px);
+  transition:0.35s ease;
 }
 
 .card:hover{
   transform:translateY(-6px) scale(1.01);
-  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  box-shadow:0 20px 50px rgba(0,0,0,0.55);
   border-color:rgba(99,102,241,0.5);
 }
 
@@ -147,17 +147,20 @@ h2{
 }
 
 .btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 8px 20px rgba(99,102,241,0.4);
+  transform:scale(1.06);
+  box-shadow:0 8px 25px rgba(99,102,241,0.45);
 }
+
+ul{padding-left:18px}
+li{margin:4px 0}
 
 footer{
   text-align:center;
   padding:30px;
   color:var(--muted);
   border-top:1px solid var(--border);
+  margin-top:40px;
 }
-
 </style>
 </head>
 
@@ -176,6 +179,8 @@ footer{
 <p>Ingénieure d'État en Génie Informatique</p>
 <p>Génie Logiciel</p>
 </header>
+
+
 
 <section id="about">
   <h2>À propos</h2>
